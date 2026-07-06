@@ -1,0 +1,55 @@
+{
+  "name": "aws-ip-range-diff",
+  "title": "AWS IP Range Change Detector",
+  "description": "Tracks AWS ip-ranges.json between runs and emits added, removed, and unchanged IP ranges as structured records. Useful for network security teams, cloud firewall automation, and infrastructure monitoring.",
+  "version": "1.0",
+  "meta": {
+    "image": "",
+    "category": "networking",
+    "actorUrl": "https://github.com/joshuapinkerton-stack/aws-ip-range-diff"
+  },
+  "pricing": {
+    "payPerEvent": {
+      "events": [
+        { "name": "range_entry", "pricePerUnit": 3 },
+        { "name": "snapshot", "pricePerUnit": 6 }
+      ]
+    },
+    "pricingInfo": "Pay-per-Event: $0.03 per detected IP range row, $0.06 per snapshot crawl."
+  },
+  "input": {
+    "title": "AWS IP Range Diff Input",
+    "description": "Configure the source ip-ranges URL and snapshot key.",
+    "type": "object",
+    "properties": {
+      "awsIpRangesUrl": {
+        "type": "string",
+        "title": "AWS IP Ranges URL",
+        "description": "Source JSON url. Defaults to the official AWS ip-ranges.json feed.",
+        "editor": "textfield",
+        "default": "https://ip-ranges.amazonaws.com/ip-ranges.json"
+      },
+      "previousSnapshotKey": {
+        "type": "string",
+        "title": "Previous Snapshot Key",
+        "description": "Key-value store key for persisting the previous run's snapshot.",
+        "editor": "textfield",
+        "default": "previous_ip_ranges"
+      }
+    }
+  },
+  "output": {
+    "title": "AWS IP Range Diff Output",
+    "description": "Diff records plus run metadata.",
+    "type": "object",
+    "properties": {
+      "family": { "type": "string" },
+      "ipPrefix": { "type": "string" },
+      "region": { "type": "string" },
+      "service": { "type": "string" },
+      "networkBorderGroup": { "type": "string" },
+      "changeType": { "type": "string" },
+      "detectedAt": { "type": "string" }
+    }
+  }
+}

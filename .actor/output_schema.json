@@ -1,0 +1,14 @@
+{
+  "title": "AWS IP Range Diff Output",
+  "description": "Diff records plus run metadata.",
+  "type": "object",
+  "properties": {
+    "family": { "type": "string" },
+    "ipPrefix": { "type": "string" },
+    "region": { "type": "string" },
+    "service": { "type": "string" },
+    "networkBorderGroup": { "type": "string" },
+    "changeType": { "type": "string" },
+    "detectedAt": { "type": "string" }
+  }
+}

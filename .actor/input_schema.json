@@ -1,0 +1,21 @@
+{
+  "title": "AWS IP Range Diff Input",
+  "description": "Configure the source ip-ranges URL and snapshot key.",
+  "type": "object",
+  "properties": {
+    "awsIpRangesUrl": {
+      "type": "string",
+      "title": "AWS IP Ranges URL",
+      "description": "Source JSON url. Defaults to the official AWS ip-ranges.json feed.",
+      "editor": "textfield",
+      "default": "https://ip-ranges.amazonaws.com/ip-ranges.json"
+    },
+    "previousSnapshotKey": {
+      "type": "string",
+      "title": "Previous Snapshot Key",
+      "description": "Key-value store key for persisting the previous run's snapshot.",
+      "editor": "textfield",
+      "default": "previous_ip_ranges"
+    }
+  }
+}

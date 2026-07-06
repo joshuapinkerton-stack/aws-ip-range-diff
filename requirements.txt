@@ -1,0 +1,2 @@
+apify==3.7.0
+crawlee[cheerio]==0.6.5
