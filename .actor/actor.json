@@ -11,8 +11,14 @@
   "pricing": {
     "payPerEvent": {
       "events": [
-        { "name": "range_entry", "pricePerUnit": 3 },
-        { "name": "snapshot", "pricePerUnit": 6 }
+        {
+          "name": "range_entry",
+          "pricePerUnit": 3
+        },
+        {
+          "name": "snapshot",
+          "pricePerUnit": 6
+        }
       ]
     },
     "pricingInfo": "Pay-per-Event: $0.03 per detected IP range row, $0.06 per snapshot crawl."
@@ -43,13 +49,28 @@
     "description": "Diff records plus run metadata.",
     "type": "object",
     "properties": {
-      "family": { "type": "string" },
-      "ipPrefix": { "type": "string" },
-      "region": { "type": "string" },
-      "service": { "type": "string" },
-      "networkBorderGroup": { "type": "string" },
-      "changeType": { "type": "string" },
-      "detectedAt": { "type": "string" }
+      "family": {
+        "type": "string"
+      },
+      "ipPrefix": {
+        "type": "string"
+      },
+      "region": {
+        "type": "string"
+      },
+      "service": {
+        "type": "string"
+      },
+      "networkBorderGroup": {
+        "type": "string"
+      },
+      "changeType": {
+        "type": "string"
+      },
+      "detectedAt": {
+        "type": "string"
+      }
     }
-  }
+  },
+  "actorSpecification": 1
 }
