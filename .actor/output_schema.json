@@ -1,14 +1,12 @@
 {
-  "title": "AWS IP Range Diff Output",
-  "description": "Diff records plus run metadata.",
-  "type": "object",
-  "properties": {
-    "family": { "type": "string" },
-    "ipPrefix": { "type": "string" },
-    "region": { "type": "string" },
-    "service": { "type": "string" },
-    "networkBorderGroup": { "type": "string" },
-    "changeType": { "type": "string" },
-    "detectedAt": { "type": "string" }
-  }
+    "$schema": "https://apify.com/schemas/v1/output.ide.json",
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Results",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
 }

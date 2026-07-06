@@ -1,4 +1,5 @@
 {
+  "schemaVersion": 1,
   "title": "AWS IP Range Diff Input",
   "description": "Configure the source ip-ranges URL and snapshot key.",
   "type": "object",
@@ -13,9 +14,10 @@
     "previousSnapshotKey": {
       "type": "string",
       "title": "Previous Snapshot Key",
-      "description": "Key-value store key for persisting the previous run's snapshot.",
+      "description": "Key-value store key for persisting the previous run snapshot.",
       "editor": "textfield",
       "default": "previous_ip_ranges"
     }
-  }
+  },
+  "required": ["awsIpRangesUrl"]
 }
