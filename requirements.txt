@@ -1,2 +1,1 @@
-apify==3.0.2
-crawlee[cheerio]==0.6.5
+apify
